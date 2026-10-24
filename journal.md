@@ -16,7 +16,10 @@ https://lapse.hackclub.com/timelapse/9eQeIUBI3W_L
 i finished the schematic ,then i moved on and wiried and organised the pcb , i then moved on to onshape in order to try and make the case but before i tried to make the pcb in onshpae so that i could have a better representation of the sclae ect.
 
 
-1hour 10 minutes , 24/10/2026 
+
+ 24/10/2026 
+ 
+1hour 10 minutes ,
 i fixed the kicad scematic by adding throught holes as previously it was only for pads. then i started to desighn and  envision the the case for the macro pad . i had to adjust the distance of the holes as well in order to make sure it fitted.
 
 https://lapse.hackclub.com/timelapse/Vj3mGdHp_jxK
