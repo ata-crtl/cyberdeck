@@ -27,3 +27,17 @@ https://lapse.hackclub.com/timelapse/Vj3mGdHp_jxK
 <img width="1036" height="417" alt="Screenshot from 2026-10-24 13-03-05" src="https://github.com/user-attachments/assets/00a4afea-86dc-413e-8d8d-ebd3160c91fd" />
 
 <img width="733" height="612" alt="Screenshot from 2026-10-24 13-03-53" src="https://github.com/user-attachments/assets/64e931bb-9794-47fb-b21a-c567d36aa47b" />
+
+
+
+
+2 hours , 27 0ct
+
+After a few iterations , i finaly managed to make the case as i wanted and got outlines of the pcb components fixed as well as the little things. now i need to make the knob for the oratry encoder and place all the components in order to see if they all fit properly , i was haveing problems finding the correct file for the keycaps.
+
+https://lapse.hackclub.com/timelapse/d1yeuJvxs9rS
+
+<img width="1035" height="542" alt="image" src="https://github.com/user-attachments/assets/10ee2f74-8575-42ee-bf17-15160c76dd8f" />
+
+
+
