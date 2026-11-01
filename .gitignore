@@ -1,0 +1,8 @@
+# KiCad lock / backup / temp files
+~*.lck
+*-backups/
+_restore_backup_*/
+*unsaved-export*.kicad_prl
+fp-info-cache
+# Python
+__pycache__/
