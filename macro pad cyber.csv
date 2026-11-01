@@ -1,6 +1,6 @@
 Id,Designator,Footprint,Quantity,Designation
 1,D1 D2 D3 D4 D5,D_DO-35_SOD27_P7.62mm_Horizontal,5,D
-2,SW1 SW2 SW3 SW4,SW_Cherry_MX_1.00u_PCB;4,SW_Push
+2,SW1 SW2 SW3 SW4,SW_Cherry_MX_1.00u_PCB,4,SW_Push
 3,SW6,RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_CircularMountingHoles,1,RotaryEncoder_Switch
 4,U1,MCU_Seeed_ESP32C3,1,MOUDLE-SEEEDUINO-XIAO
 5,U2,ER_OLEDM0.91_1x-I2C,1,ER_OLEDM0.91_1x-I2C
