@@ -1537,6 +1537,54 @@
 		(uuid "b9c2bac3-907a-4d1d-872b-99d00dd42bdc")
 	)
 	(junction
+		(at 208.28 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "91828ecb-cb63-4cf1-a7e6-e77bd3f6d5f9")
+	)
+	(junction
+		(at 233.68 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7dfa9d69-5f12-4716-b7a4-580117895a32")
+	)
+	(label "3V3"
+		(at 156.21 39.37 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+				(italic yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "128a767e-c618-40e0-8ac8-087404891bbd")
+	)
+	(wire
+		(pts
+			(xy 153.67 120.65) (xy 156.21 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63086549-7f91-44d2-900b-ce46fbe2df8e")
+	)
+	(label "3V3"
+		(at 156.21 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+				(italic yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "be2b13b9-387e-4c04-ac2e-46bc2bb893f0")
+	)
+	(junction
 		(at 212.09 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1806,7 +1854,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 68.58) (xy 228.6 68.58)
+			(xy 233.68 67.31) (xy 228.6 67.31)
 		)
 		(stroke
 			(width 0)
@@ -1976,7 +2024,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 68.58) (xy 228.6 97.79)
+			(xy 228.6 67.31) (xy 228.6 97.79)
 		)
 		(stroke
 			(width 0)
@@ -3389,7 +3437,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RF_Module:MCU_Seeed_ESP32C3"
+		(property "Footprint" "xiao:XIAO-RP2040-DIP"
 			(at 115.57 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -3737,84 +3785,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 156.21 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "facc2408-d609-4fb9-a964-b905e2d2582a")
-		(property "Reference" "#PWR03"
-			(at 156.21 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC"
-			(at 156.21 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 156.21 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 156.21 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 156.21 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c9f25e50-b273-490e-a4d4-f9e9c7305c3b")
-		)
-		(instances
-			(project "macro pad cyber"
-				(path "/2a8d869a-351e-4ee0-88f8-ae6e84388f3d"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(sheet_instances
 		(path "/"
 			(page "1")
