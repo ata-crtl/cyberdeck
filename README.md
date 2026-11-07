@@ -1,138 +1,122 @@
-# CYBERPAD
+# cyberpad
 
-A sleek, Cybertruck-inspired macro pad with 4 mechanical keys, a rotary encoder with a 3D-printed knob, and a 0.91" OLED screen, powered by a Seeed XIAO RP2040.
+this is a macro pad inspired by the cyber truck . it has 4 keys , a rotary encoder with a 3d printed knob and a small oled screen . it runs on a xiao rp2040
 
-<!-- IMAGE: hero shot of the finished CYBERPAD -->
-<!-- ![CYBERPAD](images/cyberpad.jpg) -->
-> 📷 _Image coming soon: finished CYBERPAD_
+<!-- ![cyberpad](images/cyberpad.jpg) -->
+(image here - finished pad)
 
-## Features
+## what it does
 
-- **4 Cherry MX-compatible keys**: set up as W / A / S / D out of the box
-- **EC11 rotary encoder**: turn for volume, press to mute
-- **0.91" 128×32 OLED** for status text
-- **Seeed XIAO RP2040** running [KMK](https://github.com/KMKfw/kmk_firmware). There's nothing to compile: edit `main.py` and save.
-- **3D-printed angular case and knob** inspired by the Cybertruck
+right now the keys are just w a s d , the knob changes the volume and if you press the knob it mutes . the oled shows the name and what the keys do
 
-## Gallery
+the firmware is kmk so you dont have to compile anything , you just edit main.py and save it
 
-<!-- IMAGE: KiCad schematic -->
-<!-- ![Schematic](images/schematic.png) -->
-> 📷 _Image coming soon: schematic_
+## pictures
 
-<!-- IMAGE: KiCad PCB layout / 3D view -->
-<!-- ![PCB](images/pcb.png) -->
-> 📷 _Image coming soon: PCB layout_
+<!-- ![schematic](images/schematic.png) -->
+(image here - schematic)
 
-<!-- IMAGE: case render from Onshape -->
-<!-- ![Case](images/case.png) -->
-> 📷 _Image coming soon: case render_
+<!-- ![pcb](images/pcb.png) -->
+(image here - pcb)
 
-<!-- IMAGE: assembled board inside the case -->
-<!-- ![Assembly](images/assembly.jpg) -->
-> 📷 _Image coming soon: assembly_
+<!-- ![case](images/case.png) -->
+(image here - case)
 
-## Layout
+<!-- ![assembly](images/assembly.jpg) -->
+(image here - inside the case)
 
-```
- ┌─────┬─────┐   ◎ knob
- │  W  │  A  │     turn  = volume down / up
- ├─────┼─────┤     press = mute
- │  S  │  D  │
- └─────┴─────┘   [ OLED ]
-```
+## key layout
 
-## Bill of materials
+    W  A     knob
+    S  D     oled
 
-| Qty | Part | Notes |
-|---|---|---|
-| 1 | Seeed XIAO RP2040 | Through-hole, soldered with pin headers or directly |
-| 4 | Cherry MX-compatible switches | Any 3-pin or 5-pin MX switch |
-| 4 | 1u keycaps | MX stem |
-| 1 | EC11 rotary encoder with push switch | |
-| 1 | 0.91" 128×32 I²C OLED (SSD1306) | Pin order GND, VCC, SCL, SDA |
-| 5 | 1N4148 diodes (DO-35, through-hole) | |
-| 1 | CYBERPAD PCB | From `gerbers/cyberpad-gerbers.zip` |
-| 1 | 3D-printed case | `cad files/case.step` |
-| 1 | 3D-printed knob | `cad files/knob.step` |
-| 3 | M3 screws | Mounting holes |
+## parts
 
-The KiCad parts list is in [`BOM.csv`](BOM.csv).
+- 1 xiao rp2040
+- 4 mx switches
+- 4 1u keycaps
+- 1 ec11 rotary encoder (the one with the push button)
+- 1 0.91 inch oled , 128x32 , i2c , ssd1306
+- 5 1n4148 diodes , through hole
+- 1 pcb
+- 1 3d printed case
+- 1 3d printed knob
+- 3 m3 screws
 
-## Wiring
+theres also a BOM.csv from kicad if you want it
 
-The keys and the encoder button are in a 2-row diode matrix (diodes point column → row).
+## pins
 
-| XIAO pin | Signal | Connected to |
-|---|---|---|
-| D0 | col 1 | SW1, SW4 |
-| D1 | col 0 | SW2, SW3 |
-| D2 | row 1 | via D2, D4 |
-| D3 | row 0 | via D1, D3, D5 |
-| D4 | SDA | OLED |
-| D5 | SCL | OLED |
-| D7 | Encoder B | EC11 |
-| D8 | Encoder A | EC11 |
-| D9 | Encoder switch | EC11 (through D5 to row 0) |
-| 3V3 | OLED VCC | OLED |
-| GND | GND | OLED, encoder common |
-
-## Building one
-
-### 1. Order the PCB
-Upload [`gerbers/cyberpad-gerbers.zip`](gerbers/cyberpad-gerbers.zip) to any PCB fab (JLCPCB, PCBWay, etc.). The default settings work: 2 layers, 1.6 mm, 72 × 60 mm.
-
-### 2. Print the case and knob
-Export `cad files/case.step` and `cad files/knob.step` to STL and print. PLA works fine.
-
-<!-- IMAGE: printed parts -->
-<!-- ![Printed parts](images/printed-parts.jpg) -->
-> 📷 _Image coming soon: printed parts_
-
-### 3. Solder
-1. **Diodes D1–D5**: the black stripe (cathode) goes to the square pad marked **K**.
-2. **XIAO RP2040**: solder it flat on the front, USB facing the board edge.
-3. **OLED**: check the pin order (GND, VCC, SCL, SDA) matches the silkscreen.
-4. **Rotary encoder**
-5. **Switches**: last, so they sit flush with the case plate.
-
-<!-- IMAGE: soldered PCB -->
-<!-- ![Soldered PCB](images/soldered.jpg) -->
-> 📷 _Image coming soon: soldered PCB_
-
-### 4. Flash the firmware
-Full steps are in [`firmware/README.md`](firmware/README.md). Short version:
-1. Hold **BOOT**, plug in the XIAO, and drop the CircuitPython `.uf2` for the XIAO RP2040 onto the `RPI-RP2` drive.
-2. Copy the `kmk/` folder from [KMK](https://github.com/KMKfw/kmk_firmware) onto the `CIRCUITPY` drive.
-3. Copy `adafruit_display_text/` and `adafruit_displayio_ssd1306.mpy` into `CIRCUITPY/lib/`.
-4. Copy [`firmware/main.py`](firmware/main.py) onto the drive.
-
-### 5. Assemble
-Put the PCB in the case, screw it down with M3 screws, then fit the keycaps and push the knob onto the encoder.
-
-## Customizing
-
-Keys are set in `keyboard.keymap` in `firmware/main.py`. Knob actions are in `encoder_handler.map`. Save the file and the board restarts with the new layout.
-
-```python
-keyboard.keymap = [
-    [
-        KC.W,    KC.D,    KC.MUTE,
-        KC.A,    KC.S,    KC.NO,
-    ],
-]
-```
-
-## Repo layout
-
-| Folder | What's in it |
+| xiao pin | goes to |
 |---|---|
-| `pcb/` | KiCad project (schematic, PCB, XIAO RP2040 footprint library). Open `macro pad cyber.kicad_pro`. |
-| `gerbers/` | Manufacturing files. Upload `cyberpad-gerbers.zip` to your PCB fab. |
-| `firmware/` | KMK firmware for the XIAO RP2040. See `firmware/README.md`. |
-| `cad files/` | 3D case, knob and full assembly (STEP). |
-| `BOM.csv` | Parts list. |
+| D0 | col 1 (SW1 , SW4) |
+| D1 | col 0 (SW2 , SW3) |
+| D2 | row 1 |
+| D3 | row 0 |
+| D4 | oled SDA |
+| D5 | oled SCL |
+| D7 | encoder B |
+| D8 | encoder A |
+| D9 | encoder button |
+| 3V3 | oled VCC |
+| GND | oled and encoder GND |
 
-## Build log
+the encoder button is part of the key matrix , it goes through D5 to row 0
 
-The full design journal, with timelapses, is in [`journal.md`](journal.md).
+## how to make it
+
+**pcb**
+
+upload gerbers/cyberpad-gerbers.zip to jlcpcb or where ever you want . its 2 layers , 1.6mm and 72 x 60mm so the normal settings should be fine
+
+**case**
+
+the files are case.step and knob.step in the cad files folder . export them to stl and print them , pla is fine
+
+<!-- ![printed parts](images/printed-parts.jpg) -->
+(image here - printed parts)
+
+**soldering**
+
+do the diodes first , the black line goes to the square pad with the K on it . then solder the xiao on the front with the usb facing the edge of the board . after that do the oled (check the pin order matches first) and the encoder . leave the switches till last
+
+<!-- ![soldered pcb](images/soldered.jpg) -->
+(image here - soldered pcb)
+
+**firmware**
+
+theres more detail in firmware/README.md but basicly
+
+1. hold boot and plug in the xiao , then put the circuitpython uf2 for the xiao rp2040 on the RPI-RP2 drive
+2. copy the kmk folder from https://github.com/KMKfw/kmk_firmware onto the CIRCUITPY drive
+3. copy adafruit_display_text and adafruit_displayio_ssd1306.mpy into CIRCUITPY/lib
+4. copy firmware/main.py onto the drive
+
+**putting it together**
+
+put the pcb in the case , screw it in with the m3 screws , then put on the keycaps and the knob
+
+## changing the keys
+
+the keys are in keyboard.keymap in firmware/main.py and the knob is in encoder_handler.map . the board restarts when you save
+
+    keyboard.keymap = [
+        [
+            KC.W,    KC.D,    KC.MUTE,
+            KC.A,    KC.S,    KC.NO,
+        ],
+    ]
+
+the order looks wrong but thats just how the matrix is wired , the comments in main.py explain it
+
+## folders
+
+- pcb - the kicad project
+- gerbers - files for the pcb manufacturer
+- firmware - the kmk code
+- cad files - case , knob and the full assembly
+- images - pictures for this readme
+
+## journal
+
+my build log and timelapses are in [journal.md](journal.md)
