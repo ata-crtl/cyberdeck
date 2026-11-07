@@ -2,8 +2,7 @@
 
 this is a macro pad inspired by the cyber truck . it has 4 keys , a rotary encoder with a 3d printed knob and a small oled screen . it runs on a xiao rp2040
 
-<!-- ![cyberpad](images/cyberpad.jpg) -->
-(image here - finished pad)
+<img width="3296" height="2547" alt="full" src="https://github.com/user-attachments/assets/1f96bfa5-c2e6-4d8f-903c-ec38c8e7eb5a" />
 
 ## what it does
 
@@ -13,17 +12,11 @@ the firmware is kmk so you dont have to compile anything , you just edit main.py
 
 ## pictures
 
-<!-- ![schematic](images/schematic.png) -->
-(image here - schematic)
+<img width="3508" height="2480" alt="image" src="https://github.com/user-attachments/assets/2cdca063-0177-4aff-a1e6-bac97b4736f6" />
 
-<!-- ![pcb](images/pcb.png) -->
-(image here - pcb)
 
-<!-- ![case](images/case.png) -->
-(image here - case)
+<img width="301" height="253" alt="Screenshot from 2026-11-07 17-52-26" src="https://github.com/user-attachments/assets/560db10d-5095-4beb-811e-bcf3d96ea4a9" />
 
-<!-- ![assembly](images/assembly.jpg) -->
-(image here - inside the case)
 
 ## key layout
 
@@ -63,60 +56,6 @@ theres also a BOM.csv from kicad if you want it
 
 the encoder button is part of the key matrix , it goes through D5 to row 0
 
-## how to make it
 
-**pcb**
-
-upload gerbers/cyberpad-gerbers.zip to jlcpcb or where ever you want . its 2 layers , 1.6mm and 72 x 60mm so the normal settings should be fine
-
-**case**
-
-the files are case.step and knob.step in the cad files folder . export them to stl and print them , pla is fine
-
-<!-- ![printed parts](images/printed-parts.jpg) -->
-(image here - printed parts)
-
-**soldering**
-
-do the diodes first , the black line goes to the square pad with the K on it . then solder the xiao on the front with the usb facing the edge of the board . after that do the oled (check the pin order matches first) and the encoder . leave the switches till last
-
-<!-- ![soldered pcb](images/soldered.jpg) -->
-(image here - soldered pcb)
-
-**firmware**
-
-theres more detail in firmware/README.md but basicly
-
-1. hold boot and plug in the xiao , then put the circuitpython uf2 for the xiao rp2040 on the RPI-RP2 drive
-2. copy the kmk folder from https://github.com/KMKfw/kmk_firmware onto the CIRCUITPY drive
-3. copy adafruit_display_text and adafruit_displayio_ssd1306.mpy into CIRCUITPY/lib
-4. copy firmware/main.py onto the drive
-
-**putting it together**
-
-put the pcb in the case , screw it in with the m3 screws , then put on the keycaps and the knob
-
-## changing the keys
-
-the keys are in keyboard.keymap in firmware/main.py and the knob is in encoder_handler.map . the board restarts when you save
-
-    keyboard.keymap = [
-        [
-            KC.W,    KC.D,    KC.MUTE,
-            KC.A,    KC.S,    KC.NO,
-        ],
-    ]
-
-the order looks wrong but thats just how the matrix is wired , the comments in main.py explain it
-
-## folders
-
-- pcb - the kicad project
-- gerbers - files for the pcb manufacturer
-- firmware - the kmk code
-- cad files - case , knob and the full assembly
-- images - pictures for this readme
-
-## journal
 
 my build log and timelapses are in [journal.md](journal.md)
