@@ -1,12 +1,12 @@
 part,qty,price (gbp),link,notes
-xiao rp2040,1,4.05,https://www.alibaba.com/product-detail/Seeed-Studio-XIAO-RP2040-Pre-Soldered-_1601995783447.html,pre soldered headers
-0.91 inch oled (128x32 i2c),1,0.95,https://www.alibaba.com/product-detail/SSD1306-0-91-Inch-OLED-Display_1601578292651.html,check pin order is GND VCC SCL SDA
-ec11 rotary encoder,1,0.25-0.30 each,https://www.alibaba.com/product-detail/Ec11-Rotary-Encoder-Switch-Digital-Potentiometer_1601651131543.html,min order is 10 so about 3 quid. get the 20mm shaft one
-1n4148 diode,5,0.01 each,https://www.alibaba.com/product-detail/NEW-RISE-1N4148-DO35-IN4148-DO_1600917491190.html,
-mx switches,4,7.44 for 100,https://www.alibaba.com/product-detail/100pcs-Mechanical-Keyboard-Switches-Blue-Red_1601773984442.html,way more than you need but its the cheapest way to get a few
-wasd keycaps,4,3.43-3.93,https://www.alibaba.com/product-detail/Durable-PBT-Cherry-Profile-WASD-R3_1601894525573.html,
-m3 screws,3,1.24-1.33 for the kit,https://www.alibaba.com/product-detail/Black-Carbon-Steel-Socket-Head-Cap_1601942359559.html,500 piece kit with nuts
+xiao rp2040,1,4.72,https://www.aliexpress.com/item/1005013232776575.html,
+0.91 inch oled (128x32 i2c),1,1.14,https://www.aliexpress.com/item/1005001636594363.html,check pin order is GND VCC SCL SDA
+ec11 rotary encoder,1,about 2.45 for 5,https://www.aliexpress.com/item/10000056483250.html,get the 20mm shaft one
+1n4148 diode,5,0.79 for 50,https://www.aliexpress.com/item/1005007970187200.html,
+mx switches,4,about 2 for 20,https://www.aliexpress.com/item/1005011838889689.html,any colour works
+wasd keycaps,4,3.39,https://www.aliexpress.com/item/1005011848960044.html,4 pack
+m3 screws,3,1.16,https://www.aliexpress.com/item/32810872544.html,pick m3 and a length that fits the case
 pcb,1,,,from jlcpcb using gerbers/cyberpad-gerbers.zip
 case,1,,,3d printed (cad files/case.step)
 knob,1,,,3d printed (cad files/knob.step)
-,,about 20 + shipping,,
+,,about 16 + shipping,,
