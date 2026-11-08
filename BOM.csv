@@ -1,7 +1,12 @@
-Id,Designator,Footprint,Quantity,Designation
-1,D1 D2 D3 D4 D5,D_DO-35_SOD27_P7.62mm_Horizontal,5,D
-2,SW1 SW2 SW3 SW4,SW_Cherry_MX_1.00u_PCB,4,SW_Push
-3,SW6,RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_CircularMountingHoles,1,RotaryEncoder_Switch
-4,U1,XIAO-RP2040-DIP,1,Seeed XIAO RP2040
-5,U2,ER_OLEDM0.91_1x-I2C,1,ER_OLEDM0.91_1x-I2C
-6,N/A,The 3d printed case and knob,1,N/A
+part,qty,price (gbp),link,notes
+xiao rp2040,1,4.05,https://www.alibaba.com/product-detail/Seeed-Studio-XIAO-RP2040-Pre-Soldered-_1601995783447.html,pre soldered headers
+0.91 inch oled (128x32 i2c),1,0.95,https://www.alibaba.com/product-detail/SSD1306-0-91-Inch-OLED-Display_1601578292651.html,check pin order is GND VCC SCL SDA
+ec11 rotary encoder,1,0.25-0.30 each,https://www.alibaba.com/product-detail/Ec11-Rotary-Encoder-Switch-Digital-Potentiometer_1601651131543.html,min order is 10 so about 3 quid. get the 20mm shaft one
+1n4148 diode,5,0.01 each,https://www.alibaba.com/product-detail/NEW-RISE-1N4148-DO35-IN4148-DO_1600917491190.html,
+mx switches,4,7.44 for 100,https://www.alibaba.com/product-detail/100pcs-Mechanical-Keyboard-Switches-Blue-Red_1601773984442.html,way more than you need but its the cheapest way to get a few
+wasd keycaps,4,3.43-3.93,https://www.alibaba.com/product-detail/Durable-PBT-Cherry-Profile-WASD-R3_1601894525573.html,
+m3 screws,3,1.24-1.33 for the kit,https://www.alibaba.com/product-detail/Black-Carbon-Steel-Socket-Head-Cap_1601942359559.html,500 piece kit with nuts
+pcb,1,,,from jlcpcb using gerbers/cyberpad-gerbers.zip
+case,1,,,3d printed (cad files/case.step)
+knob,1,,,3d printed (cad files/knob.step)
+,,about 20 + shipping,,
