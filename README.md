@@ -44,6 +44,8 @@ There is BOM.csv as well if you want to see where i sourced my parts from
 | 3V3 | oled VCC |
 | GND | oled and encoder GND |
 
+PS:the firmware was made with ai as i am horrible at coding
+
 
 
 
