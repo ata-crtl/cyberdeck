@@ -1,27 +1,18 @@
 # cyberpad
 
-this is a macro pad inspired by the cyber truck . it has 4 keys , a rotary encoder with a 3d printed knob and a small oled screen . it runs on a xiao rp2040
+This is a cyber deck inspired macro pad that has a amazing oled screen , 4 W A S D  cherry mx keys and a rotary encoder with custom knob made to fit in with the theme that can be 3d printed.
 
 <img width="3296" height="2547" alt="full" src="https://github.com/user-attachments/assets/1f96bfa5-c2e6-4d8f-903c-ec38c8e7eb5a" />
 
 ## what it does
-
-right now the keys are just w a s d , the knob changes the volume and if you press the knob it mutes . the oled shows the name and what the keys do
-
-the firmware is kmk so you dont have to compile anything , you just edit main.py and save it
-
+Each keys maps to w a s d ,starting from the upper left corner at w and so on. The knob changes the volume and if you press the knob it mutes . The oled screen showsthe name and what the keys do , i might improve this later to add animations or you can do this yourself
+The firmware is kmk so you dont have to compile anything , you just edit main.py and save it
 ## pictures
 
 <img width="3508" height="2480" alt="image" src="https://github.com/user-attachments/assets/2cdca063-0177-4aff-a1e6-bac97b4736f6" />
 
 
 <img width="301" height="253" alt="Screenshot from 2026-11-07 17-52-26" src="https://github.com/user-attachments/assets/560db10d-5095-4beb-811e-bcf3d96ea4a9" />
-
-
-## key layout
-
-    W  A     knob
-    S  D     oled
 
 ## parts
 
@@ -36,8 +27,7 @@ the firmware is kmk so you dont have to compile anything , you just edit main.py
 - 1 3d printed knob
 - 3 m3 screws
 
-theres also a BOM.csv from kicad if you want it
-
+There is BOM.csv as well if you want to see where i sourced my parts from
 ## pins
 
 | xiao pin | goes to |
@@ -54,8 +44,7 @@ theres also a BOM.csv from kicad if you want it
 | 3V3 | oled VCC |
 | GND | oled and encoder GND |
 
-the encoder button is part of the key matrix , it goes through D5 to row 0
 
 
 
-my build log and timelapses are in [journal.md](journal.md)
+
